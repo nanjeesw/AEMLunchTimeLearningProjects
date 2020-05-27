@@ -1,0 +1,23 @@
+{
+	"info": {
+		"_postman_id": "53c32bfb-34b4-455f-90e6-132835a720ce",
+		"name": "AEMLunchTimeLearning_SIMA",
+		"description": "This is for my Lunch Time Learning project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LTL_D14_CreateJcrContent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "This is for creating a node in JCR using a Servlet"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
