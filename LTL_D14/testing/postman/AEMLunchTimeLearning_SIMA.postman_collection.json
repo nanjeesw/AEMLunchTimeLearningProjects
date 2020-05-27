@@ -9,10 +9,34 @@
 		{
 			"name": "LTL_D14_CreateJcrContent",
 			"request": {
-				"method": "GET",
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:4502/bin/submitdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"bin",
+						"submitdata"
+					]
 				},
 				"description": "This is for creating a node in JCR using a Servlet"
 			},
