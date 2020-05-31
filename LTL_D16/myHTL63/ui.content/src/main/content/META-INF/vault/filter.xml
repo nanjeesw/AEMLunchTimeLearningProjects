@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/myHTL63"/>
+    <filter root="/content/myHTL63"/>
+    <filter root="/content/dam/myHTL63"/>
+</workspaceFilter>
