@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "3283c1e7-c187-405a-82dc-cdce2baa8cfd",
+		"name": "AEMLunchTimeLearning_D19_SIMA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "A request using an unauthorised user",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admintest",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admintest",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/ServletAssignment/beverage-servlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"ServletAssignment",
+						"beverage-servlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A request using an invalid JSON format",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    \"beverageName\": \"Pepsi\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/ServletAssignment/beverage-servlet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"ServletAssignment",
+						"beverage-servlet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A request with an empty body",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/ServletAssignment/beverage-servlet?beverageName=&",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"ServletAssignment",
+						"beverage-servlet"
+					],
+					"query": [
+						{
+							"key": "beverageName",
+							"value": ""
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A request to add “Pepsi” to the JCR",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beverageName\": \"Pepsi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/ServletAssignment/beverage-servlet?beverageName=Pepsi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"ServletAssignment",
+						"beverage-servlet"
+					],
+					"query": [
+						{
+							"key": "beverageName",
+							"value": "Pepsi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "A request to add “Coffee” to the JCR",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"beverageName\": \"Coffee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4502/content/ServletAssignment/beverage-servlet?beverageName=Coffee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4502",
+					"path": [
+						"content",
+						"ServletAssignment",
+						"beverage-servlet"
+					],
+					"query": [
+						{
+							"key": "beverageName",
+							"value": "Coffee"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
